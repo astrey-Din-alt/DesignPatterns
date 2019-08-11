@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7746A9C0-BC46-45EA-8A3D-CDBF6ECD8C82}</ProjectGuid>
+    <ProjectGuid>{DE8E0E8C-F895-4753-8F5E-290263DFBF95}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CreationalDesignPatterns</RootNamespace>
-    <AssemblyName>CreationalDesignPatterns</AssemblyName>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,37 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory\AbstractFactoryClient.cs" />
-    <Compile Include="AbstractFactory\ConcreteFactory1.cs" />
-    <Compile Include="AbstractFactory\ConcreteFactory2.cs" />
-    <Compile Include="AbstractFactory\ConcreteProductA.cs" />
-    <Compile Include="AbstractFactory\ConcreteProductB.cs" />
-    <Compile Include="AbstractFactory\IAbstractFactory.cs" />
-    <Compile Include="AbstractFactory\IAbstractProductA.cs" />
-    <Compile Include="AbstractFactory\IAbstractProductB.cs" />
-    <Compile Include="Builder\BuilderClient.cs" />
-    <Compile Include="Builder\ConcreteBuilder.cs" />
-    <Compile Include="Builder\Director.cs" />
-    <Compile Include="Builder\IBuilder.cs" />
-    <Compile Include="Builder\Product.cs" />
-    <Compile Include="FabricMethod\FabricMethodClient.cs" />
-    <Compile Include="FabricMethod\ConcreteCreatorA.cs" />
-    <Compile Include="FabricMethod\ConcreteCreatorB.cs" />
-    <Compile Include="FabricMethod\ConcreteProductA.cs" />
-    <Compile Include="FabricMethod\ConcreteProductB.cs" />
-    <Compile Include="FabricMethod\Creator.cs" />
-    <Compile Include="FabricMethod\IProduct.cs" />
+    <Compile Include="Bridge\Abstraction.cs" />
+    <Compile Include="Adapter\Adaptee.cs" />
+    <Compile Include="Adapter\Adapter.cs" />
+    <Compile Include="Adapter\AdapterClient.cs" />
+    <Compile Include="Adapter\ITarget.cs" />
+    <Compile Include="Bridge\BridgeClient.cs" />
+    <Compile Include="Bridge\ConcreteImplementationA.cs" />
+    <Compile Include="Bridge\ConcreteImplementationB.cs" />
+    <Compile Include="Bridge\ExtendedAbstraction.cs" />
+    <Compile Include="Bridge\IImplementation.cs" />
+    <Compile Include="Composite\Component.cs" />
+    <Compile Include="Composite\Composite.cs" />
+    <Compile Include="Composite\CompositeClient.cs" />
+    <Compile Include="Composite\Leaf.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Prototipe\IdInfo.cs" />
-    <Compile Include="Prototipe\Person.cs" />
-    <Compile Include="Prototipe\ProtorypeClient.cs" />
-    <Compile Include="Singleton\Singleton_Multithread.cs" />
-    <Compile Include="Singleton\Singleton_Naive.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Decorator\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
