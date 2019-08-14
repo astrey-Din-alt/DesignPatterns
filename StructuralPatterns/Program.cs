@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.Adapter;
 using DesignPatterns.Bridge;
 using DesignPatterns.Composite;
+using DesignPatterns.Decorator;
 using System;
 
 namespace DesignPatterns
@@ -38,6 +39,17 @@ namespace DesignPatterns
             //client.ClientCode(tree);
             //Console.Write("Client: I don't need to check the components classes even when managing the tree:\n");
             //client.ClientCode2(tree, leaf);
+
+            /// Decorator pattern example
+            //DecoratorClient client = new DecoratorClient();
+            //var simple = new ConcreteComponent();
+            //Console.WriteLine("Client: I get a simple component:");
+            //client.ClientCode(simple);
+            //Console.WriteLine();
+            //ConcreteDecoratorA decorator1 = new ConcreteDecoratorA(simple);
+            //ConcreteDecoratorB decorator2 = new ConcreteDecoratorB(decorator1);
+            //Console.WriteLine("Client: Now I've got a decorated component:");
+            //client.ClientCode(decorator2);
 
             Console.ReadKey();
         }

@@ -57,14 +57,18 @@
     <Compile Include="Composite\Composite.cs" />
     <Compile Include="Composite\CompositeClient.cs" />
     <Compile Include="Composite\Leaf.cs" />
+    <Compile Include="Decorator\Component.cs" />
+    <Compile Include="Decorator\ConcreteComponent.cs" />
+    <Compile Include="Decorator\ConcreteDecoratorA.cs" />
+    <Compile Include="Decorator\ConcreteDecoratorB.cs" />
+    <Compile Include="Decorator\Decorator.cs" />
+    <Compile Include="Decorator\DecoratorClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Decorator\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
