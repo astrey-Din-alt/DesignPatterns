@@ -63,6 +63,10 @@
     <Compile Include="Decorator\ConcreteDecoratorB.cs" />
     <Compile Include="Decorator\Decorator.cs" />
     <Compile Include="Decorator\DecoratorClient.cs" />
+    <Compile Include="Faсade\Faсade.cs" />
+    <Compile Include="Faсade\FacadeClient.cs" />
+    <Compile Include="Faсade\SubSystem1.cs" />
+    <Compile Include="Faсade\SubSystem2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

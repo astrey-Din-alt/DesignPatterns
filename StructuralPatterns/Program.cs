@@ -2,6 +2,7 @@
 using DesignPatterns.Bridge;
 using DesignPatterns.Composite;
 using DesignPatterns.Decorator;
+using DesignPatterns.Facade;
 using System;
 
 namespace DesignPatterns
@@ -10,10 +11,12 @@ namespace DesignPatterns
     {
         private static void Main(string[] args)
         {
+            #region Adapter
             ///Adapter pattern example
             //var adapter = new AdapterClient();
             //adapter.Main();
-
+            #endregion
+            #region Bridge
             ///Bridge pattern example
             //var bridgeClient = new BridgeClient();
             //Abstraction abstraction = new Abstraction(new ConcreteImplementationA());
@@ -21,7 +24,8 @@ namespace DesignPatterns
             //Console.WriteLine();
             //abstraction = new ExtendedAbstraction(new ConcreteImplementationB());
             //bridgeClient.ClientCode(abstraction);
-
+            #endregion
+            #region Composite
             ///Composite pattern example
             //CompositeClient client = new CompositeClient();
             //Leaf leaf = new Leaf();
@@ -39,7 +43,8 @@ namespace DesignPatterns
             //client.ClientCode(tree);
             //Console.Write("Client: I don't need to check the components classes even when managing the tree:\n");
             //client.ClientCode2(tree, leaf);
-
+            #endregion
+            #region Decorator
             /// Decorator pattern example
             //DecoratorClient client = new DecoratorClient();
             //var simple = new ConcreteComponent();
@@ -50,7 +55,14 @@ namespace DesignPatterns
             //ConcreteDecoratorB decorator2 = new ConcreteDecoratorB(decorator1);
             //Console.WriteLine("Client: Now I've got a decorated component:");
             //client.ClientCode(decorator2);
-
+            #endregion
+            #region Facade
+            /// Facade pattern example
+            SubSystem1 subsystem1 = new SubSystem1();
+            SubSystem2 subsystem2 = new SubSystem2();
+            Facade.Facade facade = new Facade.Facade(subsystem1, subsystem2);
+            FacadeClient.ClientCode(facade);
+            #endregion
             Console.ReadKey();
         }
     }
